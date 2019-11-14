@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thông tin giao hàng | Haka Coffee</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="de_an_midx.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div>
+                    <h3>1. thông tin người mua hàng</h3>
+                    <div style="border: 1px solid #ddd;">
+                        <div style="padding: 2rem">
+                            <div class="row">
+                                <div class="col-6 ">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Họ và tên ngưởi nhận</label>
+                                            <input type="text" class="form-control" id="ho_va_ten"
+                                                placeholder="Họ và tên">
+
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">số điện thoại</label>
+                                            <input type="text" class="form-control" id="so_dien_thoai"
+                                                placeholder="Số điện thoại">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Địa chỉ giao hàng</label>
+                                    <input type="text" class="form-control" id="dia_chi_giao_hang"
+                                        placeholder="Địa chỉ giao hàng">
+                                </div>
+                            </form>
+                            <form>
+                                <div class="form-group">
+                                    <label for="comment">ghi chú(yêu cầu thêm)</label>
+                                    <textarea type="comment" class="form-control" rows=3 id="ghi_chu"
+                                        placeholder="ghi chú"></textarea>
+                                </div>
+                            </form>
+
+                            <button type="button" onclick="getinf(thong_tin_nguoi_dung)" class="btn btn-primary">Xác nhận</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>2. Chọn hình thức thanh toán</h3>
+                    <div style="border: 1px solid #ddd">
+                        <div style="padding:2rem">
+                            <div class="form-check">
+                                <label class="form-check-label" for="radio1">
+                                    <input type="radio" class="form-check-input" id="radio1" name="optradio"
+                                        value="option1" checked>Thanh toán bằng tiền mặt khi nhận hàng
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label" for="radio2">
+                                    <input type="radio" class="form-check-input" id="radio2" name="optradio"
+                                        value="option2">Thẻ ATM nội địa/Internet Banking
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>2. Chọn Thời gian nhận hàng</h3>
+                    <div style="border: 1px solid #ddd">
+                        <div style="padding:2rem">
+                            <p>giao hàng nội thành chỉ trong 30phút</p>
+                            <div class="form-check">
+                                    <label class="form-check-label" for="radio1">
+                                        <input type="radio" class="form-check-input" id="radio1" name="optradio"
+                                            value="option1" checked>Ngày hôm nay
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="radio2">
+                                        <input type="radio" class="form-check-input" id="radio2" name="optradio"
+                                            value="option2">1 ngày khác
+                                    </label>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="test.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
