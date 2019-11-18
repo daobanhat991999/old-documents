@@ -1,7 +1,4 @@
 .header{
-    display: block;
-    position: relative;
-    padding-top: 12px;
     
 }
 .li{
@@ -10,6 +7,9 @@
 }
 .bieu-tuong{
     border-radius: 100px 100px 100px 100px;
+    height: 100px;
+    width: 100px;
+    margin-top: 10px
 }
 
 .footer-top {
@@ -32,14 +32,15 @@ body{
 }
 
   .story{
-      padding-top: 40px;
-      padding-bottom: 30px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
   }
   .headofgroup{
       margin-top: 3rem;
-      font-family: monospace;
-      font-size:1.5rem;
-      color:#efb33a
+      font-size:2rem;
+      color:#efb33a;
+      margin-bottom: 1.5rem;
+      border-bottom: #efb33a solid 2px;
   }
   .product{
       background-image: url("./images/bgforproduct.jpg");
@@ -49,12 +50,11 @@ body{
       padding-bottom: 20px;
   }
   .footer {
-    background: #000000;
-    padding-top: 100px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 3rem;
 }
   .footer_title {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 700;
     color: #fff;
     margin-top: 0;
@@ -65,22 +65,50 @@ body{
     color: #fff
 }
 .copy_right{
-    margin-top: 5px;
-    border-top: 1px solid #fff;
-    padding: 20px 0 0
+    border-top: 1px solid #fff;  
 }
 .video{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.block_story_1{
-    background-image: url("./images/bg_blog_home.png")no-repeat right bottom;
-    padding: 30px 0;
+
+.storyofcoffee_item{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 1rem;
+    border-bottom: #ddd solid 1px;
 }
-.menu_scroll_link{
-    font-size: 16px;
+.bg_blog{
+    background-color: #fff;
+}
+.menu-item-li{
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #000;
-    font-family: 'BebasNeue','Lato', "Times New Roman", serif;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+.menu-item-a{
+    text-decoration: none; 
+    color:#efb33a;
 }
 
+.menu-board{
+    position: -webkit-sticky;
+    position: sticky; 
+    border: #ffffff solid 1px;
+    background-color: #ffffff;
+    top: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.gio-hang{
+    float: right;
+    color: #efb33a;
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky; 
+    bottom: 20rem;
+}

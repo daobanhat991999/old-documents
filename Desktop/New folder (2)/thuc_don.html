@@ -13,31 +13,16 @@
 
 <body>
     <!--header-->
-    <div class="container-fluid" style="background-color: #efb33a;height: 1rem;"></div>
-
-    <div class="container-fluid header img-responsive bg-dark">
-        <div class="row float-right" style="padding-right: 10rem">
-            <div style="padding-right: 1rem;">
-                <a href="cua-hang.html#map" style="color: rgba(255,255,255,.5); text-decoration: none;"><i
-                        class="fas fa-map-marker-alt"></i> find the store</a>
-            </div>
-            <p>|</p>
-            <div style="padding-right: 1rem; padding-left: 1rem;">
-                <a href="signin.html" style="color: rgba(255,255,255,.5); text-decoration: none;">sign in</a>
-            </div>
-        </div>
-        <div class="row" style="padding-left: 10rem">
-            <div class="col-2">
+    <div class="container-fluid bg-dark" style="height: 120px;">
+        <div class="row">
+            <div class="col-sm-2 text-center">
                 <a href="trang-chu.html">
-                    <img src="images/bieu-tuong.png" alt="bieu-tuong" height="100px" width="100px" class="bieu-tuong">
+                    <img src="images/logo.png" alt="logo" class="bieu-tuong">
                 </a>
             </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-sm bg-muted navbar-dark justify-content-center">
+            <div class="col-sm-8">
+                <nav class="navbar navbar-expand-sm bg-muted navbar-dark justify-content-center"
+                    style="padding-top: 50px">
                     <!-- Toggler/collapsibe Button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#collapsibleNavbar">
@@ -49,14 +34,14 @@
                         style="font-size: 1.5rem;">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="story.html">câu chuyện thương hiệu |
+                                <a class="nav-link" href="story.html">Câu chuyện thương hiệu |
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="storyofcoffee.html">Chuyện cà phê |</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="thuc_don.html">thực đơn |</a>
+                                <a class="nav-link" href="thuc_don.html">Thực đơn |</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="cua-hang.html">Cửa hàng</a>
@@ -65,42 +50,50 @@
                     </div>
                 </nav>
             </div>
+            <div class="col-sm-2 text-center" style="margin-top: 12px">
+                <a href="cua-hang.html#map" style="color: rgba(255,255,255,.5); text-decoration: none;"><i
+                        class="fas fa-map-marker-alt"></i> Find the store</a>
+            </div>
         </div>
     </div>
     <!--phan noi dung-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <ul class="list-unstyled">
-                        <li><a class="menu_scroll_link" href="#link_mon_noi_bat" style="text-decoration: none;">món nổi
-                                bật</a></li>
-                        <li><a class="menu_scroll_link" href="#link_ca_phe_phin" style="text-decoration: none;">cà phê
-                                phin</a></li>
-                        <li><a class="menu_scroll_link" href="#link_espresso" style="text-decoration: none;">espresso</a>
-                        </li>
-                        <li><a class="menu_scroll_link" href="#link_tra_va_macchiato" style="text-decoration: none;">trà và
-                                macchiato</a></li>
-                        <li><a class="menu_scroll_link" href="#link_coffee_bean" style="text-decoration: none;">coffee
-                                bean</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-9">
-                    <h1 style='padding-top: 1rem;' class="headofgroup" id="link_mon_noi_bat">những đồ uống tiêu
-                        biểu:</h1>
-                    <div id="montieubieu"></div>
-                    <h1 style='padding-top: 1rem;' class="headofgroup" id="link_espresso">espresso</h1>
-                    <div id="espresso"></div>
-                    <h1 style='padding-top: 1rem;' class="headofgroup" id="link_ca_phe_phin">cà phê phin</h1>
-                    <div id="filter_coffee"></div>
-                    <h1 style='padding-top: 1rem;' class="headofgroup" id="link_tra_va_macchiato">trà và macchiato</h1>
-                    <div id="tra_macchiato"></div>
-                    <h1 style='padding-top: 1rem;' class="headofgroup" id="link_coffee_bean">coffee bean</h1>
-                    <div id="coffee_bean"></div>
-                    
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <ul class="list-unstyled menu-board">
+                    <li class=" menu-item-li"><a class="menu-item-a" href="#link_mon_noi_bat"  style="text-decoration: none;">món nổi
+                            bật</a></li>
+                    <li class="menu-item-li"><a class="menu-item-a" href="#link_ca_phe_phin" style="text-decoration: none;">cà phê
+                            phin</a></li>
+                    <li class="menu-item-li"><a class="menu-item-a" href="#link_espresso" style="text-decoration: none;">espresso</a>
+                    </li>
+                    <li class="menu-item-li"><a class="menu-item-a" href="#link_tra_va_macchiato" style="text-decoration: none;">trà và
+                            macchiato</a></li>
+                    <li class="menu-item-li"><a class="menu-item-a" href="#link_coffee_bean" style="text-decoration: none;">coffee
+                            bean</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9" style="border-left: #efb33a solid 3px;">
+                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_mon_noi_bat">những đồ uống tiêu
+                    biểu:</h1>
+                <div id="montieubieu"></div>
+                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_espresso">espresso</h1>
+                <div id="espresso"></div>
+                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_ca_phe_phin">cà phê phin</h1>
+                <div id="filter_coffee"></div>
+                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_tra_va_macchiato">trà và macchiato</h1>
+                <div id="tra_macchiato"></div>
+                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_coffee_bean">coffee bean</h1>
+                <div id="coffee_bean"></div>
             </div>
         </div>
-    
+    </div>
+    <!--gio hang-->
+    <div class="btn btn-primary btn-lg gio-hang">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="amount">0</span>
+    </div>
+
 
     <!--phần footer-->
     <div class="container-fluid bg-dark footer">

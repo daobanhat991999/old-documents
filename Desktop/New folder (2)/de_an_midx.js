@@ -4,7 +4,7 @@ function login(){
 
     if(tk==="admin" && matkhau==="thinhngu"){
         alert('đăng nhập thành công!');
-        window.location.href= 'admin.html';
+        window.location.href= 'adminThinh.html';
     }
     else{
         alert('false')

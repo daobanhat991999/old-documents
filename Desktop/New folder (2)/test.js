@@ -95,7 +95,7 @@ let filter_coffee_data = [
         "name": "bạc sỉu",
         "price": "32000"
     },
-    
+
 ]
 let tea_macchiato_data = [
     {
@@ -114,16 +114,18 @@ let tea_macchiato_data = [
         "price": "65000"
     },
 ]
-let thong_tin_nguoi_dung=[]
+let danh_sach_sp = [montieubieu_data, espresso_data, coffee_bean_data, filter_coffee_data, tea_macchiato_data]
+let thong_tin_nguoi_dung = []
 //ham hien thi san pham
-function displaysanpham(array,id) {
+function displaysanpham(array, id) {
     var s = "";
-    let itemcount = Math.round(array.length/3);
-    for(let i=0; i<itemcount; i++){
+    let itemcount = Math.round(array.length / 3);
+    for (let i = 0; i < itemcount; i++) {
         s += `<div class="row">`
-        for(let j=i*3; j < i*3+3; j++){
-            const element = array[j];
-            s += `<div class="col-sm-4" style="padding: 10px">
+        for (let j = i * 3; j < i * 3 + 3; j++) {
+            if (j < array.length) {
+                const element = array[j];
+                s += `<div class="col-sm-4" style="padding: 10px">
                     <div class="card" style="rem">
                         <img class="card-img-top" src="${element.img}" alt="${element.name}" style="width:100%; height:15rem">
                         <div class="card-body">
@@ -133,33 +135,16 @@ function displaysanpham(array,id) {
                         </div>
                     </div>
                 </div>`
+            }
         }
         s += "</div>"
-    } 
+    }
     document.getElementById(id).innerHTML = s;
 }
-//ham lay tin nguoi dung
-function getinf(){
-    let name = document.getElementById(ho_va_ten);
-    let sdt = document.getElementById(so_dien_thoai);
-    let diachi = document.getElementById(dia_chi);
-    let ghichu = document.getElementById(ghi_chu);
-    let frame={
-        "name": name,
-        "sdt": sdt,
-        "diachi": diachi,
-        "ghichu": ghichu
-    },
-    array =+ array.push(frame)
-}
-displaysanpham(montieubieu_data,"montieubieu");
-displaysanpham(espresso_data,"espresso");
-displaysanpham(coffee_bean_data,"coffee_bean");
-displaysanpham(filter_coffee_data,"filter_coffee");
-displaysanpham(tea_macchiato_data,"tra_macchiato");
-funtion getTime(){
-    let d = new Date();
-    let s ="";
-    s = 
-    d.getDay();
-}
+displaysanpham(montieubieu_data, "montieubieu");
+displaysanpham(espresso_data, "espresso");
+displaysanpham(coffee_bean_data, "coffee_bean");
+displaysanpham(filter_coffee_data, "filter_coffee");
+displaysanpham(tea_macchiato_data, "tra_macchiato");
+
+
