@@ -57,12 +57,12 @@
         </div>
     </div>
     <!--phan noi dung-->
-    <div class="container">
+    <div class="container" style="padding-top: 2rem">
         <div class="row">
             <div class="col-sm-3">
                 <ul class="list-unstyled menu-board">
-                    <li class=" menu-item-li"><a class="menu-item-a" href="#link_mon_noi_bat"  style="text-decoration: none;">món nổi
-                            bật</a></li>
+                    <!-- <li class=" menu-item-li"><a class="menu-item-a" href="#link_mon_noi_bat"  style="text-decoration: none;">món nổi
+                            bật</a></li> -->
                     <li class="menu-item-li"><a class="menu-item-a" href="#link_ca_phe_phin" style="text-decoration: none;">cà phê
                             phin</a></li>
                     <li class="menu-item-li"><a class="menu-item-a" href="#link_espresso" style="text-decoration: none;">espresso</a>
@@ -74,25 +74,31 @@
                 </ul>
             </div>
             <div class="col-sm-9" style="border-left: #efb33a solid 3px;">
-                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_mon_noi_bat">những đồ uống tiêu
+                <!-- <h1 style='padding-top: 1rem;' class="headofgroup" id="link_mon_noi_bat">những đồ uống tiêu
                     biểu:</h1>
-                <div id="montieubieu"></div>
-                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_espresso">espresso</h1>
-                <div id="espresso"></div>
-                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_ca_phe_phin">cà phê phin</h1>
+                <div id="montieubieu"></div> -->
+                <span style='padding-top: 1rem;' class="headofgroup" id="link_ca_phe_phin" style="margin-top: 0 !important">Cà phê phin</span>
                 <div id="filter_coffee"></div>
-                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_tra_va_macchiato">trà và macchiato</h1>
+                <span style='padding-top: 1rem;' class="headofgroup" id="link_espresso" style="margin-top: 0 !important">Espresso</span>
+                <div id="espresso"></div>
+                <span style='padding-top: 1rem;' class="headofgroup" id="link_tra_va_macchiato" style="margin-top: 0 !important">Trà và macchiato</span>
                 <div id="tra_macchiato"></div>
-                <h1 style='padding-top: 1rem;' class="headofgroup" id="link_coffee_bean">coffee bean</h1>
+                <span style='padding-top: 1rem;' class="headofgroup" id="link_coffee_bean" style="margin-top: 0 !important">Coffeebean</span>
                 <div id="coffee_bean"></div>
             </div>
         </div>
     </div>
     <!--gio hang-->
-    <div class="btn btn-primary btn-lg gio-hang">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="amount">0</span>
-    </div>
+    <!--gio hang-->
+    <div class="gio-hang">
+            <a href="thong_tin_mua_hang.html">
+            <button type="button" class="btn btn-warning" onclick="toGioHang()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="amount">0</span>
+            </button>
+            </a>
+        </div>
+
 
     <!--phần footer-->
     <div class="container-fluid bg-dark footer">

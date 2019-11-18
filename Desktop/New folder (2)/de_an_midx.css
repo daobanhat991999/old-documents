@@ -112,3 +112,10 @@ body{
     position: sticky; 
     bottom: 20rem;
 }
+.shopping-card-frame{
+    margin: 0;
+    background-color: #ffffff;
+}
+.shopping-card-content{
+    padding: 20px;
+}
