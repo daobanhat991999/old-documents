@@ -58,13 +58,11 @@
         </div>
     </div>
     <!--content-->
-    <button type="button" class="btn btn-warning" style="margin: 1rem"><a class="unstyle text-dark" href="gio_hang.html"
-        style="text-decoration: none;">Quay lại giỏ hàng</a></button>
     <div class="container" style="margin-top: 2rem">
         <div class="row">
             <div class="col-8">
                 <div>
-                    <h3>1. Thông tin người mua hàng</h3>
+                    <h3>1. thông tin người mua hàng</h3>
                     <div style="border: 1px solid #ddd;">
                         <div style="padding: 2rem">
                             <div class="row">
@@ -73,8 +71,8 @@
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Họ tên người nhận</label>
                                             <input type="text" class="form-control" id="ho_va_ten"
-                                                placeholder="Họ và tên" onblur="validate1()">
-                                            <span class="error" id="name-error"></span>
+                                                placeholder="Họ và tên" onblur="validateName()"></input>
+                                            <p id="validate_name"></p>
                                         </div>
                                     </form>
                                 </div>
@@ -83,8 +81,7 @@
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Số điện thoại</label>
                                             <input type="text" class="form-control" id="so_dien_thoai"
-                                                placeholder="Số điện thoại" onblur="validate2()">
-                                            <span class="error" id="phonenumber-error"></span>
+                                                placeholder="Số điện thoại">
                                         </div>
                                     </form>
                                 </div>
@@ -93,24 +90,22 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Địa chỉ giao hàng</label>
                                     <input type="text" class="form-control" id="dia_chi_giao_hang"
-                                        placeholder="Địa chỉ giao hàng" onblur="validate3()">
-                                    <span class="error" id="address-error"></span>
+                                        placeholder="Địa chỉ giao hàng">
                                 </div>
                             </form>
-                            <div>
-                            </div>
+                            
                             <form>
                                 <div class="form-group">
-                                    <label for="comment">Ghi chú (yêu cầu thêm, không cần thiết phải nhập)</label>
+                                    <label for="comment">ghi chú(yêu cầu thêm)</label>
                                     <textarea type="comment" class="form-control" rows=3 id="ghi_chu"
                                         placeholder="ghi chú"></textarea>
                                 </div>
                             </form>
-                            <p class="text-primary" style="font-size: 1.5rem;">Giao hàng siêu nhanh, nội thành chỉ 30
-                                phút <i class="fas fa-shipping-fast"></i></p>
-                            <button type="button" onclick="displayInfor()" class="btn btn-warning">Xác
+                            <p class="text-primary" style="font-size: 1.5rem;">Giao hàng siêu nhanh, nội thành chỉ 30 phút <i class="fas fa-shipping-fast"></i></p>
+                            <button type="button" onclick="getinf(thong_tin_nguoi_dung)" class="btn btn-warning">Xác
                                 nhận</button>
-                            </form>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -126,8 +121,10 @@
                                 <a href="#" style="float: right"><button type="button"
                                         class="btn btn-outline-warning">Sửa</button></a>
                             </div>
-                            <div>
-                                <div style="padding-top: 1rem;" id="content"></div>
+                            <div style="padding-top: 1rem;">
+                                <h5>Đào Bá Nhật</h5>
+                                <p>205 B2 trại Găng, Thanh Nhàn, Hà Nội</p>
+                                <p>0349591999</p>
                             </div>
                         </div>
                     </div>
@@ -141,85 +138,125 @@
                                     <span style="font-size: 1.7rem; color:#efb33a">đơn hàng</span>
                                     <a href="gio_hang.html" style="float: right"><button type="button"
                                             class="btn btn-outline-warning">Sửa</button></a>
-                                    <div id="hoaDon"></div>
+                                </div>
+                                <div class="row" style="padding-top: 1rem; border-bottom: #ddd solid 1px;">
+                                    <div class="col-sm-8">
+                                        <p><strong>2x</strong>caramel macchiato coldbrew</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p style="text-align:right;">10.000đ</p>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-top: 1rem; border-bottom: #ddd solid 1px;">
+                                    <div class="col-sm-8">
+                                        <p><strong>2x</strong>caramel macchiato coldbrew</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p style="text-align:right;">10.000đ</p>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-top: 1rem; border-bottom: #ddd solid 1px;">
+                                    <div class="col-sm-8">
+                                        <p><strong>2x</strong>caramel macchiato coldbrew</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p style="text-align:right;">10.000đ</p>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-top: 1rem; border-bottom: #ddd solid 2px;">
+                                    <div class="col-sm-8">
+                                        <p><strong>2x</strong>caramel macchiato coldbrew</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p style="text-align:right;">10.000đ</p>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-top: 1rem;">
+                                    <div class="col-sm-8">
+                                        <h5>Thành tiền:</h5>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p style="color:red; font-size: 1.5rem; text-align: right;">60.000đ</p>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                         <div style="padding-top: 1rem;">
-                            <button type="button" class="btn btn-warning btn-block" style="padding:1rem" onclick="datMua()">
-                                <h4>ĐẶT MUA</h4>
-                            </button>
+                            <button type="button" class="btn btn-warning btn-block" style="padding:1rem"><h4>ĐẶT MUA</h4></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
     <!--gio hang-->
     <div class="gio-hang">
-        <a href="gio_hang.html">
+            <a href="gio_hang.html">
             <button type="button" class="btn btn-warning">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="amount">0</span>
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="amount">0</span>
             </button>
-        </a>
-    </div>
+            </a>
+        </div>
 
-    <!--phần footer-->
-    <div class="container-fluid bg-dark footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="container footer_title">
-                        <div>
-                            <p>flow us in</p>
-                            <a href="https://www.facebook.com/hakacoffee/" target="_blank"><i
-                                    class="fab fa-facebook fa-2x"></i></a>
+        <!--phần footer-->
+        <div class="container-fluid bg-dark footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="container footer_title">
+                            <div>
+                                <p>flow us in</p>
+                                <a href="https://www.facebook.com/hakacoffee/" target="_blank"><i
+                                        class="fab fa-facebook fa-2x"></i></a>
+                            </div>
+                            <div>
+                                <p>review us in</p>
+                                <a href="https://www.tripadvisor.com.vn/UserReviewEdit-g293924-d10301082-Haka_Coffee_39_Hang_Dau-Hanoi.html"
+                                    target="_blank"><i class="fab fa-tripadvisor fa-2x"></i></a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-sm-4">
                         <div>
-                            <p>review us in</p>
-                            <a href="https://www.tripadvisor.com.vn/UserReviewEdit-g293924-d10301082-Haka_Coffee_39_Hang_Dau-Hanoi.html"
-                                target="_blank"><i class="fab fa-tripadvisor fa-2x"></i></a>
+                            <h3 class="footer_title">hỗ trợ: </h3>
+                            <p class="footer_content">hỗ trợ: 035 969 1998(07:00-21:00)</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <h3 class="footer_title">địa chỉ</h3>
+                            <p class="footer_content">
+                                39 Hàng Dầu, phường Lý Thái Tổ<br>
+                                Quận Hoàn Kiếm, thành phố Hà Nội<br>
+                                035 969 1998<br>
+                                hakacoffee@gmail.com
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div>
-                        <h3 class="footer_title">hỗ trợ: </h3>
-                        <p class="footer_content">hỗ trợ: 035 969 1998(07:00-21:00)</p>
-                    </div>
+                <div class="copy_right">
+                    <p class="footer_content">Copyright <i class="far fa-copyright"></i> 2019 HaKa
+                        Coffee. All rights
+                        reserved.</p>
                 </div>
-                <div class="col-sm-4">
-                    <div>
-                        <h3 class="footer_title">địa chỉ</h3>
-                        <p class="footer_content">
-                            39 Hàng Dầu, phường Lý Thái Tổ<br>
-                            Quận Hoàn Kiếm, thành phố Hà Nội<br>
-                            035 969 1998<br>
-                            hakacoffee@gmail.com
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="copy_right">
-                <p class="footer_content">Copyright <i class="far fa-copyright"></i> 2019 HaKa
-                    Coffee. All rights
-                    reserved.</p>
             </div>
         </div>
-    </div>
-    </div>
-    <script src="tienHangThanhToan.js"></script>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        </div>
+        <script src="tienHangThanhToan.js"></script>
+        <script src="listsanpham.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

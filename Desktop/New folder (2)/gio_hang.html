@@ -57,137 +57,73 @@
             </div>
         </div>
     </div>
-    <!--content-->
-    <div class="container">
-        <h1 style="display: block;">giỏ hàng</h1>
-        <div class="row">
-            <div class="col-md-9">
-
-                <div>
-                    <div class="shopping-card-frame">
-                        <div class="shopping-card-content">
-                            <div class="row">
-                                <div class="col-sm-3 text-center">
-                                    <img src="./images/product_images/americano.jpg" class="img-responsive img-fuild"
-                                        style="height: 100px" />
-                                </div>
-                                <div class="col-sm-3 text-center">
-                                    <p>Americano</p>
-                                    <a href="#" style="padding-top: 2rem;">xóa</a>
-                                </div>
-                                <div class="col-sm-3 text-center">
-                                    <p>10.000đ</p>
-                                </div>
-                                <div class="col-sm-3 text-center">
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-secondary">-</button>
-                                        <button type="button" class="btn btn-secondary">1</button>
-                                        <button type="button" class="btn btn-secondary">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="shopping-card-frame">
-                        <div class="shopping-card-content">
-                            <div class="row">
-                                <div class="col-sm-3 text-center">
-                                    <img src="./images/product_images/americano.jpg" class="img-responsive img-fuild"
-                                        style="height: 100px" />
-                                </div>
-                                <div class="col-sm-3 text-center">
-                                    <p>Americano</p>
-                                    <a href="#" style="padding-top: 2rem;">xóa</a>
-                                </div>
-                                <div class="col-sm-3 text-center">
-                                    <p>10.000đ</p>
-                                </div>
-                                <div class="col-sm-3 text-center">
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-secondary">-</button>
-                                        <button type="button" class="btn btn-secondary">1</button>
-                                        <button type="button" class="btn btn-secondary">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="shopping-card-frame">
-                    <div style="border-bottom: #ddd solid 1px; padding: 10px">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>Thành tiền:</p>
-                            </div>
-                            <div class="col-sm-6" style="color: red ; ">
-                                <p style="font-size: 1.5rem">10.000đ</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center"  style="padding: 10px">
-                        <a href="thong_tin_mua_hang.html"><button" class="btn btn-warning">Tiến hành thanh toán</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <button type="button" class="btn btn-warning" style="margin: 1rem"><a class="unstyle text-dark" href="thuc_don.html"
+            style="text-decoration: none;">quay lại thực đơn</a></button>
+    <div class="container" id="displaySanPhamDaChonMua">
     </div>
-
-    <!--gio hang-->
     <div class="gio-hang">
-        <a href="thong_tin_mua_hang.html">
-        <button type="button" class="btn btn-warning">
+        <a href="gio_hang.html">
+            <button type="button" class="btn btn-warning" onclick="displayGioHang()">
                 <i class="fas fa-shopping-cart"></i>
                 <span id="amount">0</span>
-        </button>
+            </button>
         </a>
     </div>
+
+
+
+
+
+
+
+
+
     <!--phần footer-->
-    <div class="container-fluid bg-dark footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="container footer_title">
-                        <div>
-                            <p>flow us in</p>
-                            <a href="https://www.facebook.com/hakacoffee/" target="_blank"><i
-                                    class="fab fa-facebook fa-2x"></i></a>
+    <footer>
+        <div class=" container-fluid bg-dark footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="container footer_title">
+                            <div>
+                                <p>flow us in</p>
+                                <a href="https://www.facebook.com/hakacoffee/" target="_blank"><i
+                                        class="fab fa-facebook fa-2x"></i></a>
+                            </div>
+                            <div>
+                                <p>review us in</p>
+                                <a href="https://www.tripadvisor.com.vn/UserReviewEdit-g293924-d10301082-Haka_Coffee_39_Hang_Dau-Hanoi.html"
+                                    target="_blank"><i class="fab fa-tripadvisor fa-2x"></i></a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-sm-4">
                         <div>
-                            <p>review us in</p>
-                            <a href="https://www.tripadvisor.com.vn/UserReviewEdit-g293924-d10301082-Haka_Coffee_39_Hang_Dau-Hanoi.html"
-                                target="_blank"><i class="fab fa-tripadvisor fa-2x"></i></a>
+                            <h3 class="footer_title">hỗ trợ: </h3>
+                            <p class="footer_content">hỗ trợ: 035 969 1998(07:00-21:00)</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <h3 class="footer_title">địa chỉ</h3>
+                            <p class="footer_content">
+                                39 Hàng Dầu, phường Lý Thái Tổ<br>
+                                quận Hoàn Kiếm, thành phố Hà Nội<br>
+                                035 969 1998<br>
+                                HakaCoffee@gmail.com
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div>
-                        <h3 class="footer_title">hỗ trợ: </h3>
-                        <p class="footer_content">hỗ trợ: 035 969 1998(07:00-21:00)</p>
-                    </div>
+                <div class="copy_right">
+                    <p class="footer_content">Copyright <i class="far fa-copyright"></i> 2019 HaKa Coffee. All
+                        rights
+                        reserved.</p>
                 </div>
-                <div class="col-sm-4">
-                    <div>
-                        <h3 class="footer_title">địa chỉ</h3>
-                        <p class="footer_content">
-                            39 Hàng Dầu, phường Lý Thái Tổ<br>
-                            quận Hoàn Kiếm, thành phố Hà Nội<br>
-                            035 969 1998<br>
-                            HakaCoffee@gmail.com
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="copy_right">
-                <p class="footer_content">Copyright <i class="far fa-copyright"></i> 2019 HaKa Coffee. All rights
-                    reserved.</p>
             </div>
         </div>
-    </div>
-
-    <script src="test.js"></script>
-    <script src="de_an_midx.js"></script>
+    </footer>
+    <script src="gioHang.js"></script>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 

@@ -47,8 +47,6 @@ let data = [
         "name": "espresso",
         "price": "55000"
     },
-
-
     {
         "img": "./images/coffee_bean/coffee_bean_metal.JPG",
         "name": "metal coffee bean",
