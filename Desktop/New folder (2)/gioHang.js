@@ -1,50 +1,65 @@
 
-var hangDat = JSON.parse(localStorage.getItem('hangDatLocalStorage'));
-var count = hangDat.length;
-if (count == 0) {
-    let chuaCoSanPham = `<div class="shopping-card-frame text-center" style="height: 25rem; margin-top: 3rem; padding-top: 2rem;">
+// var hangDat = JSON.parse(localStorage.getItem('HangDatLocalStorage'));
+// var count = hangDat.length;
+// if (count == 0) {
+//     let chuaCoSanPham = `<div class="shopping-card-frame text-center" style="height: 25rem; margin-top: 3rem; padding-top: 2rem;">
+//     <span style="color: #ffc107"><i class="fas fa-shopping-basket fa-10x"></i></span>
+//     <h5 style="color: tomato;">không có sản phẩm nào trong giỏ hàng của bạn.</h5>
+//     <a href="thuc_don.html"><button type='button' class="btn btn-warning">Tiếp tục mua sắm</button>
+//     </div>`
+//     document.getElementById("displaySanPhamDaChonMua").innerHTML = chuaCoSanPham;
+// }
+// tạo list hang dat khong trung, kem voi so luong, luu trong listHangDat
+// else {
+//     var listHangDat = [];
+//     var listSanPham = JSON.parse(localStorage.getItem("listSanPhamLocalStorage"));
+//     hangDat = JSON.parse(localStorage.getItem("HangDatLocalStorage"));
+//     var tenSanPhamDaDat = hangDat.slice();
+//     for (let i = 0; i < tenSanPhamDaDat.length; i++) {
+//         const tenSanPham = tenSanPhamDaDat[i];
+//         var soLuongCuaSanPham = 1;
+//         for (let j = i + 1; j < tenSanPhamDaDat.length; j++) {
+//             if (tenSanPham == tenSanPhamDaDat[j]) {
+//                 tenSanPhamDaDat.splice(j, 1);
+//                 soLuongCuaSanPham ++;
+//             }
+//         }
+//         listHangDat.push({ "tenSanPhamDaDat": tenSanPham, "soLuongCuaSanPham": soLuongCuaSanPham })
+//     }
+//     localStorage.setItem("listHangDatLocalStorage", JSON.stringify(listHangDat));
+//     listHangDat = JSON.parse(localStorage.getItem("listHangDatLocalStorage"));
+//     listSanPham = JSON.parse(localStorage.getItem("listSanPhamLocalStorage"));
+//     var hoaDon = [];
+//     for (let i = 0; i < listHangDat.length; i++) {
+//         var elementOfListHangDat = listHangDat[i];
+//         for (let j = 0; j < listSanPham.length; j++) {
+//             var elementOfListSanPham = listSanPham[j];
+//             if (elementOfListHangDat.tenSanPhamDaDat == elementOfListSanPham.name) {
+//                 hoaDon.push(elementOfListSanPham);
+//                 hoaDon[i].soLuongCuaSanPham = listHangDat[i].soLuongCuaSanPham;
+//             }
+//         }
+//     }
+// }
+// localStorage.setItem("hoaDonLocalStorage", JSON.stringify(hoaDon));
+
+
+//-----------------------------check--------------------------------
+function checkDisplay() {
+    let hoaDon = JSON.parse(localStorage.getItem('hoaDonLocalStorage'));
+    if(hoaDon.length === 0) {
+    //     let chuaCoSanPham = `<div class="shopping-card-frame text-center" style="height: 25rem; margin-top: 3rem; padding-top: 2rem;">
+    // <span style="color: #ffc107"><i class="fas fa-shopping-basket fa-10x"></i></span>
+    // <h5 style="color: tomato;">không có sản phẩm nào trong giỏ hàng của bạn.</h5>
+    // <a href="thuc_don.html"><button type='button' class="btn btn-warning">Tiếp tục mua sắm</button>
+    // </div>`
+    document.getElementById("displaySanPhamDaChonMua").innerHTML = `<div class="shopping-card-frame text-center" style="height: 25rem; margin-top: 3rem; padding-top: 2rem;">
     <span style="color: #ffc107"><i class="fas fa-shopping-basket fa-10x"></i></span>
     <h5 style="color: tomato;">không có sản phẩm nào trong giỏ hàng của bạn.</h5>
     <a href="thuc_don.html"><button type='button' class="btn btn-warning">Tiếp tục mua sắm</button>
     </div>`
-document.getElementById("displaySanPhamDaChonMua").innerHTML = chuaCoSanPham;
-}
-// tạo list hang dat khong trung, kem voi so luong, luu trong listHangDat
-else {
-    var listHangDat = [];
-    var listSanPham = JSON.parse(localStorage.getItem("listSanPhamLocalStory"));
-    hangDat = JSON.parse(localStorage.getItem("hangDatLocalStorage"));
-    var tenSanPhamDaDat = hangDat.slice();
-    for (let i = 0; i < tenSanPhamDaDat.length; i++) {
-        const tenSanPham = tenSanPhamDaDat[i];
-        var soLuongCuaSanPham = 1;
-        for (let j = i + 1; j < tenSanPhamDaDat.length; j++) {
-            if (tenSanPham == tenSanPhamDaDat[j]) {
-                tenSanPhamDaDat.splice(j, 1);
-                soLuongCuaSanPham ++;
-            }
-        }
-
-        listHangDat.push({ "tenSanPhamDaDat": tenSanPham, "soLuongCuaSanPham": soLuongCuaSanPham })
-    }
-    localStorage.setItem("listHangDatLocalStorage", JSON.stringify(listHangDat));
-    listHangDat = JSON.parse(localStorage.getItem("listHangDatLocalStorage"));
-    listSanPham = JSON.parse(localStorage.getItem("listSanPhamLocalStory"));
-    var hoaDon = [];
-    for (let i = 0; i < listHangDat.length; i++) {
-        var elementOfListHangDat = listHangDat[i];
-        for (let j = 0; j < listSanPham.length; j++) {
-            var elementOfListSanPham = listSanPham[j];
-            if (elementOfListHangDat.tenSanPhamDaDat == elementOfListSanPham.name) {
-                hoaDon.push(elementOfListSanPham);
-                hoaDon[i].soLuongCuaSanPham = listHangDat[i].soLuongCuaSanPham;
-            }
-        }
     }
 }
-localStorage.setItem("hoaDonLocalStorage", JSON.stringify(hoaDon));
-
-
 //------------------------ hien san pham trong muc gio hang--------------------------
 function displayGioHang() {
     hoaDon = JSON.parse(localStorage.getItem("hoaDonLocalStorage"));
@@ -103,14 +118,16 @@ function displayGioHang() {
                 </div>
             </div>
             <div class="text-center" style="padding: 10px">
-                <a href="thong_tin_mua_hang.html">
+                <a href="tien_hanh_thanh_toan.html">
                     <button" class="btn btn-warning">Tiến hành thanh toán</button>
                 </a>
             </div>
         </div>
     </div>
 </div>`
+
     document.getElementById("displaySanPhamDaChonMua").innerHTML = sanPham;
+    checkDisplay()
 }
 displayGioHang();
 // --------------------------------------------giam 1 san pham----------------------------------------
@@ -137,21 +154,21 @@ function add(e) {
     var hoaDon = JSON.parse(localStorage.getItem("hoaDonLocalStorage"));
     var bienTam = e.target.dataset.itemid;
     for (let i = 0; i < hoaDon.length; i++) {
-        if(hoaDon[i].name == bienTam){
+        if (hoaDon[i].name == bienTam) {
             hoaDon[i].soLuongCuaSanPham++;
-            document.getElementById(`soluong_${bienTam}`).innerHTML=hoaDon[i].soLuongCuaSanPham
+            document.getElementById(`soluong_${bienTam}`).innerHTML = hoaDon[i].soLuongCuaSanPham
         }
     }
     localStorage.setItem("hoaDonLocalStorage", JSON.stringify(hoaDon));
     displayGioHang();
 }
 //-------------------------------------------giam 1 san pham-------------------------------------------
-function del(e){
+function del(e) {
     var hoaDon = JSON.parse(localStorage.getItem("hoaDonLocalStorage"));
-    var bienTam = e.target.dataset.itemid; 
+    var bienTam = e.target.dataset.itemid;
     for (let i = 0; i < hoaDon.length; i++) {
-        if(hoaDon[i].name == bienTam){
-            hoaDon.splice(i,1)
+        if (hoaDon[i].name == bienTam) {
+            hoaDon.splice(i, 1)
         }
     }
     localStorage.setItem("hoaDonLocalStorage", JSON.stringify(hoaDon));

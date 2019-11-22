@@ -1,225 +1,6 @@
-let listSanPham = [
-    // {
-    //     "img": "./images/product_images/americano.jpg",
-    //     "name": "Americano",
-    //     "price": "55000",
-    //     "type": ["món d?c bi?t","espresso"],
-    //     "countTotal":0,
-    //     "issale":0
-    // },
-    // {
-    //     "img": "./images/product_images/caramel_macchiato.jpg",
-    //     "name": "caramel macchiato",
-    //     "price": "65000",
-    //     "type": ["món d?c bi?t","espresso"],
-    //     "countTotal":0,
-    //     "issale":0
-    // },
-    // {
-    //     "img": "./images/product_images/espresso.jpg",
-    //     "name": "espresso",
-    //     "price": "55000",
-    //     "type": ["món d?c bi?t","espresso"],
-    //     "countTotal":0,
-    //     "issale":0
-    // },
-    // {
-    //     "img": "./images/product_images/milk_coffee.jpg",
-    //     "name": "nâu dá",
-    //     "price": "30000",
-    //     "type": ["món d?c bi?t","cà phê phin"],
-    //     "countTotal":0,
-    //     "issale":0
-    // },
-    // {
-    //     "img": "./images/product_images/tra_phuc_bon_tu.png",
-    //     "name": "trà phúc b?n t?",
-    //     "price": "65000",
-    //     "type": ["món d?c bi?t","trà"],
-    //     "countTotal":0,
-    //     "issale":0
-    // },
-    // {
-    //     "img": "./images/product_images/tra_xoai_macchiato.jpg",
-    //     "name": "trà xoài macchiato",
-    //     "price": "65000",
-    //     "type": ["món d?c bi?t","trà"],
-    //     "countTotal":0,
-    //     "issale":0
-    // },
-    // {
-    //     "img": "./images/product_images/americano.jpg",
-    //     "name": "Americano",
-    //     "price": "55000",
-    //     "type": "món d?c bi?t",
-    //     "countTotal":0,
-    //     "issale":0
-    // },
-    {
-        "img": "./images/product_images/caramel_macchiato.jpg",
-        "name": "Caramel macchiato",
-        "price": 65000,
-        "type": "espresso",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/espresso.jpg",
-        "name": "Espresso",
-        "price": 55000,
-        "type": "espresso",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/coffee_bean/coffee_bean_metal.JPG",
-        "name": "Metal coffee bean",
-        "price": 300000,
-        "type": "coffeeBean",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/coffee_bean/coffee_bean_wood.JPG",
-        "name": "Wood coffee bean",
-        "price": 300000,
-        "type": "coffeeBean",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/coffee_bean/coffee_bean_water.JPG",
-        "name": "Water coffee bean",
-        "price": 300000,
-        "type": "coffeeBean",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/coffee_bean/coffee_bean_fire.JPG",
-        "name": "Fire coffee bean",
-        "price": 300000,
-        "type": "coffeeBean",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/coffee_bean/coffee_bean_earth.JPG",
-        "name": "Earth coffee bean",
-        "price": 300000,
-        "type": "coffeeBean",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/coffee_bean/coffee_bean_for_test.JPG",
-        "name": "Coffee bean for test",
-        "price": 20000,
-        "type": "coffeeBean",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/den.jpg",
-        "name": "Cà phê đen",
-        "price": 29000,
-        "type": "cà phê phin",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/milk_coffee.jpg",
-        "name": "Cà phê nâu",
-        "price": 32000,
-        "type": "cà phê phin",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/bac_siu.jpg",
-        "name": "Bạc sỉu",
-        "price": 32000,
-        "type": "cà phê phin",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/tra_phuc_bon_tu.png",
-        "name": "Trà phúc bồn tử",
-        "price": 60000,
-        "type": "trà",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/tra_xoai_macchiato.jpg",
-        "name": "Trà xoài macchiato",
-        "price": 65000,
-        "type": "trà",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/tra_cherry_macchiato.jpg",
-        "name": "Trà cherry",
-        "price": 65000,
-        "type": "trà",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/coldbrew.jpg",
-        "name": "Coldbrew",
-        "price": 55000,
-        "type": "coldbrew",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/coldbrew_cam_sa.jpg",
-        "name": "Coldbrew cam sả",
-        "price": 60000,
-        "type": "coldbrew",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/coldbrew_milk.jpg",
-        "name": "Coldbrew sữa",
-        "price": 60000,
-        "type": "coldbrew",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/coldbrew_phuc_bon_tu.png",
-        "name": "Coldbrew bồn tử",
-        "price": 65000,
-        "type": "coldbrew",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/iced_chocolate.jpg",
-        "name": "Ice chocolate",
-        "price": 65000,
-        "type": "iceDrink",
-        "countTotal": 0,
-        "issale": 0
-    },
-    {
-        "img": "./images/product_images/matcha_latte.jpg",
-        "name": "Matcha latte",
-        "price": 65000,
-        "type": "iceDrink",
-        "countTotal": 0,
-        "issale": 0
-    },
-]
-localStorage.setItem("listSanPhamLocalStory", JSON.stringify(listSanPham));
-//------------------------------------------------------------------
+
 function listProduct() {
-    let data = JSON.parse(localStorage.getItem("listSanPhamLocalStory"));
+    let data = JSON.parse(localStorage.getItem("listSanPhamLocalStorage"));
     let s = "";
     for (let i = 0; i < data.length; i++) {
         const element = data[i];
@@ -230,10 +11,10 @@ function listProduct() {
         <td>${element.type}</td>
         <td>${element.issale}%</td>
         <td>
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Edit">
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Edit" onclick="getID(${i})">
                 Edit
             </button>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Delete" data-itemId="${element.name}" onclick = "delProduct1(event)">
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Delete" onclick="getID(${i})">
                 Delete
             </button>
         </td>
@@ -243,9 +24,11 @@ function listProduct() {
     document.getElementById("list-product").innerHTML = s;
 }
 listProduct()
-
+function getID(i) {
+    localStorage.setItem("ID", i);
+}
 function addProduct() {
-    let listSanPham = JSON.parse(localStorage.getItem("listSanPhamLocalStory"));
+    let listSanPham = JSON.parse(localStorage.getItem("listSanPhamLocalStorage"));
 
     listSanPham.push({
         img: document.getElementById("addImg").value,
@@ -254,39 +37,143 @@ function addProduct() {
         type: document.getElementById("addType").value,
         issale: document.getElementById("addSale").value
     })
-    localStorage.setItem("listSanPhamLocalStory", JSON.stringify(listSanPham))
+    localStorage.setItem("listSanPhamLocalStorage", JSON.stringify(listSanPham))
+    alert('Add success');
+    $('#Add_new').modal('hide');
     listProduct();
-    alert('Update success');
 }
-function delProduct1(e) {
-    let bienTam = e.target.dataset.itemid;
-    return bienTam;
-}
-function delProduct2() {
-    let bienTam = delProduct1();
-    let listSanPham = JSON.parse(localStorage.getItem('listSanPhamLocalStory'))
+function editProduct() {
+    listSanPham = JSON.parse(localStorage.getItem("listSanPhamLocalStorage"));
+    let objTam = {
+        img: document.getElementById("editImg").value,
+        name: document.getElementById("editName").value,
+        price: document.getElementById("editCost").value,
+        issale: document.getElementById("editCost").value,
+        type: document.getElementById("editType").value,
+    }
+    let id = localStorage.getItem("ID");
     for (let i = 0; i < listSanPham.length; i++) {
-        if (listSanPham[i].name == bienTam) {
-            listSanPham.splice(i, 1)
+        if (id == i) {
+            listSanPham[i] = objTam;
         }
     }
-    localStorage.setItem("listSanPhamLocalStory", JSON.stringify(listSanPham));
+    localStorage.setItem("listSanPhamLocalStorage", JSON.stringify(listSanPham))
+    alert('Update success, please go back and reload the web to see the update');
+    $('#Edit').modal('hide');
+    listProduct();
+}
+function delProduct() {
+    let listSanPham = JSON.parse(localStorage.getItem("listSanPhamLocalStorage"));
+    let id = localStorage.getItem("ID");
+    listSanPham.splice(id, 1);
+    localStorage.setItem("listSanPhamLocalStorage", JSON.stringify(listSanPham))
+    alert('Del success');
+    $('#Delete').modal('hide');
     listProduct();
 }
 //--------------------------validate--------------------------------------
-// let validateName = false;
-// let validatePhoneNumber = false;
-// let validateAddress = false;
-
-// function validateText(id,) {
-//     if (document.getElementById('#id').value == '') {
-//         document.getElementById('name-error').innerHTML = '<i style="color: red">Bạn chưa điền tên</i>';
-//     }
-//     else {
-//         document.getElementById('name-error').innerHTML = '<i class="fa fa-check" style="color:green;"> Hoàn thành </i>';
-//         validateName = true;
-//     }
-// }
+let validateImage = false;
+let validateName = false;
+let validateCost = false;
+let validateSale = false;
+let validateImage1 = false;
+let validateName1 = false;
+let validateCost1 = false;
+let validateSale1 = false;
+function checkAdd (){
+    if(validateImage == true &&
+        validateName == true &&
+        validateCost == true &&
+        validateSale == true){
+            addProduct()
+        }
+    else{
+        alert('cần điền đầy đủ thông tin')
+    }
+} 
+function checkEdit (){
+    if(validateImage1 == true &&
+        validateName1 == true &&
+        validateCost1 == true &&
+        validateSale1 == true){
+            editProduct()
+        }
+    else{
+        alert('cần điền đầy đủ thông tin')
+    }
+} 
+function validateAll1() {
+    if (document.getElementById('addImg').value == '') {
+        document.getElementById('image-error').innerHTML = '<i style="color: red">Bạn chưa điền </i>';
+    }
+    else {
+        document.getElementById('image-error').innerHTML = '<i class="fa fa-check" style="color:green;"> Hoàn thành </i>';
+        validateImage = true;
+    }
+}
+function validateAll2() {
+    if (document.getElementById('addName').value == '') {
+        document.getElementById('name-error').innerHTML = '<i style="color: red">Bạn chưa điền </i>';
+    }
+    else {
+        document.getElementById('name-error').innerHTML = '<i class="fa fa-check" style="color:green;"> Hoàn thành </i>';
+        validateName = true;
+    }
+}
+function validateAll3() {
+    if (document.getElementById('addCost').value == '') {
+        document.getElementById('cost-error').innerHTML = '<i style="color: red">Bạn chưa điền </i>';
+    }
+    else {
+        document.getElementById('cost-error').innerHTML = '<i class="fa fa-check" style="color:green;"> Hoàn thành </i>';
+        validateCost = true;
+    }
+}
+function validateAll4() {
+    if (document.getElementById('addSale').value == '') {
+        document.getElementById('sale-error').innerHTML = '<i style="color: red">Bạn chưa điền </i>';
+    }
+    else {
+        document.getElementById('sale-error').innerHTML = '<i class="fa fa-check" style="color:green;"> Hoàn thành </i>';
+        validateSale = true;
+    }
+}
+function validateAll5() {
+    if (document.getElementById('editImg').value == '') {
+        document.getElementById('image1-error').innerHTML = '<i style="color: red">Bạn chưa điền </i>';
+    }
+    else {
+        document.getElementById('image1-error').innerHTML = '<i class="fa fa-check" style="color:green;"> Hoàn thành </i>';
+        validateImage1 = true;
+    }
+}
+function validateAll6() {
+    if (document.getElementById('editName').value == '') {
+        document.getElementById('name1-error').innerHTML = '<i style="color: red">Bạn chưa điền </i>';
+    }
+    else {
+        document.getElementById('name1-error').innerHTML = '<i class="fa fa-check" style="color:green;"> Hoàn thành </i>';
+        validateName1 = true;
+    }
+}
+function validateAll7() {
+    if (document.getElementById('editCost').value == '') {
+        document.getElementById('cost1-error').innerHTML = '<i style="color: red">Bạn chưa điền </i>';
+    }
+    else {
+        document.getElementById('cost1-error').innerHTML = '<i class="fa fa-check" style="color:green;"> Hoàn thành </i>';
+        validateCost1 = true;
+    }
+}
+function validateAll8() {
+    if (document.getElementById('editSale').value == '') {
+        document.getElementById('sale1-error').innerHTML = '<i style="color: red">Bạn chưa điền </i>';
+    }
+    else {
+        document.getElementById('sale1-error').innerHTML = '<i class="fa fa-check" style="color:green;"> Hoàn thành </i>';
+        validateSale1 = true;
+    }
+}
 
 // function validate2() {
 //     var regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;

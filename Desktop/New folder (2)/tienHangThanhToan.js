@@ -110,10 +110,10 @@ function displayHoaDon() {
 </div>
 </div>
 <div class="row" style="padding-top: 1rem;">
-    <div class="col-sm-8">
+    <div class="col-sm-6">
         <h5>Thành tiền:</h5>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-6">
         <p style="color:red; font-size: 1.5rem; text-align: right;">${numberWithCommas(thanhTien + 29000)}đ</p>
     </div>
 </div>`
