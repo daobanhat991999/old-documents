@@ -126,12 +126,15 @@ function numberWithCommas(x) {
 }
 //---------------------------------------dat mua-------------------------------------
 function datMua() {
+    let layTimeDatHang = new Date()
+    let layGioDatHang = layTimeDatHang.getHours();
+    let layPhutDatHang = layTimeDatHang.getMinutes();
     let objTam = {
         nameCustomer: document.getElementById('ho_va_ten').value,
         PhongNumberCustomer: document.getElementById('so_dien_thoai').value,
         addressCustomer: document.getElementById('dia_chi_giao_hang').value,
         noteCustomer: document.getElementById('ghi_chu').value,
-        timeCustomer: new Date()
+        timeCustomer: `${layGioDatHang}. ${layPhutDatHang}`
     }
     localStorage.setItem("CustomerLocalstorage",JSON.stringify(objTam));
 }

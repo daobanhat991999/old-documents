@@ -160,6 +160,25 @@ let listSanPham = [
         "issale": 0
     },
 ]
-localStorage.setItem("listSanPhamLocalStorage", JSON.stringify(listSanPham));
-let hoaDon = []
-localStorage.setItem('hoaDonLocalStorage', JSON.stringify(hoaDon));
+// localStorage.setItem("listSanPhamLocalStorage", JSON.stringify(listSanPham));
+// let hoaDon = []
+// localStorage.setItem('hoaDonLocalStorage', JSON.stringify(hoaDon));
+// let storage = localStorage.getitem('listSanPhamLocalStorage');
+// if (storage == undefined){
+//     localStorage.setItem('listSanPhamLocalStorage', JSON.stringify(listSanPham))
+// }
+function madeData() {
+    if (typeof (Storage) !== "undefined") {
+        let hoaDon = []
+        let storageOfListSanPham = localStorage.getItem('listSanPhamLocalStorage');
+        let storageOfHoaDon = localStorage.getItem('listSanPhamLocalStorage');
+        if (storageOfListSanPham == undefined || storageOfHoaDon == undefined) {
+            localStorage.setItem('listSanPhamLocalStorage', JSON.stringify(listSanPham));
+            localStorage.setItem('hoaDonLocalStorage', JSON.stringify(hoaDon))
+        }
+    }
+    else {
+        alert('Sorry! No Web Storage support..')
+    }
+}
+madeData();

@@ -119,3 +119,9 @@ body{
 .shopping-card-content{
     padding: 20px;
 }
+.narbar-sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
