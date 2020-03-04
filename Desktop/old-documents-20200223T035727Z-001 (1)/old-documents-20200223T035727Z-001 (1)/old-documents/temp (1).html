@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>temp</title>
+    <!-- ===========jquery========== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- ==========bs============ -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/24ff89e83a.js"></script>
+    <!-- ========css=========== -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <section class="mynav">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="img/logo.png" alt="logo" class="logo" id="logo" />
+                </div>
+                <div class="col-sm-4 nav-center">
+                    <form id="search">
+                        <div class="input-group mb-3">
+                            <input id="search-input" type="text" class="form-control" style="width: 300px"
+                                placeholder="Tìm kiếm giáo trình mong muốn...">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-light" type="button" id="search-button"><i
+                                        class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <div class="nav-right">
+                        <div class="row">
+                            <div class="col-6" style="padding: 0px">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-success"><i class="fas fa-store"></i></button>
+                                    <button type="button" class="btn btn-success"><i
+                                            class="fab fa-facebook-messenger"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <!-- <div class="row">
+                                    <div class="col-4" style="padding: 0px">
+                                        <span style=" color: white; float: right; height: 50px; display: -webkit-box;
+                                        -webkit-line-clamp: 1;
+                                        -webkit-box-orient: vertical;
+                                         overflow: hidden;
+                                         text-overflow: ellipsis;">Nguyễn Anh Tuấn</span>
+                                    </div>
+                                    <div class="col-4" style="padding: 0px">
+                                        <img src="https://api.adorable.io/avatars/256/abott@adorable.png"
+                                            style="width: 38px; height:38px; border-radius: 25px;">
+                                    </div>
+                                </div>  -->
+                                <ul class="nav navbar-nav navbar-right ml-auto">
+                                    <li class="nav-item dropdown">
+                                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
+                                            <img src="https://api.adorable.io/avatars/256/abott@adorable.png"
+                                                class="avatar" alt="Avatar"> Nguyễn Anh Tuấn
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" class="dropdown-item"><i class="fa fa-user-o"></i>
+                                                    Profile</a></li>
+                                            <li><a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i>
+                                                    Calendar</a></li>
+                                            <li><a href="#" class="dropdown-item"><i class="fa fa-sliders"></i>
+                                                    Settings</a></li>
+                                            <li class="divider dropdown-divider"></li>
+                                            <li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i>
+                                                    Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <nav class="navbar-default navbar-expand-xl mynav">
+            <div class="container">
+                <div class="navbar-header d-flex col">
+                    <img src="img/logo.png" alt="logo" class="logo" id="logo" />
+                    <button type="button" data-target="#navbarCollapse1" data-toggle="collapse"
+                        class="navbar-toggle navbar-toggler ml-auto">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbarCollapse1" class="collapse navbar-collapse justify-content-start">
+                    <form id="search">
+                        <div class="input-group mb-3">
+                            <input id="search-input" type="text" class="form-control" style="width: 300px"
+                                placeholder="Tìm kiếm giáo trình mong muốn...">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-light" type="button" id="search-button"><i
+                                        class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                        <li class="nav-item"><a href="#" class="nav-link notifications"><i
+                                    class="fa fa-bell-o"></i><span class="badge">1</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span
+                                    class="badge">10</span></a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img
+                                    src="https://www.tutorialrepublic.com/examples/images/avatar/2.jpg" class="avatar"
+                                    alt="Avatar"> Paula Wilson <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></li>
+                                <li class="divider dropdown-divider"></li>
+                                <li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section> -->
+
+    <!-- <nav class="navbar navbar-default navbar-expand-xl navbar-light">
+        <div class="navbar-header d-flex col">
+            <a class="navbar-brand" href="#"><i class="fa fa-cube"></i>Brand<b>Name</b></a>
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse"
+                class="navbar-toggle navbar-toggler ml-auto">
+                <span class="navbar-toggler-icon"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        Collection of nav links, forms, and other content for toggling
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+            <ul class="nav navbar-nav">
+                <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item dropdown">
+                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b
+                            class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Web Design</a></li>
+                        <li><a href="#" class="dropdown-item">Web Development</a></li>
+                        <li><a href="#" class="dropdown-item">Graphic Design</a></li>
+                        <li><a href="#" class="dropdown-item">Digital Marketing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <form class="navbar-form form-inline">
+                <div class="input-group search-box">
+                    <input type="text" id="search" class="form-control" placeholder="Search by Name">
+                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right ml-auto">
+                <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span
+                            class="badge">1</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span
+                            class="badge">10</span></a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img
+                            src="https://www.tutorialrepublic.com/examples/images/avatar/2.jpg" class="avatar"
+                            alt="Avatar"> Paula Wilson <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></li>
+                        <li><a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></li>
+                        <li><a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></li>
+                        <li class="divider dropdown-divider"></li>
+                        <li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top-left">
+                    <span>Giúp đỡ</span>
+                    <span>Báo lỗi</span>
+                    <span>Góp ý</span>
+                </div>
+                <div class="footer-top-right">
+                    <span>Liên kết với chúng tôi:</span>
+                    <a href="https://www.youtube.com/watch?v=LCkyW7RE6Wk" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Đội ngũ phát triển: 3T Team</span>
+            </div>
+        </div>
+    </section> -->
+    <section class="main user">
+        <div class="container">
+            <div class="row">
+                <div class="user-left col-sm-3">
+                    <p>Thông tin cá nhân</p>
+                    <p>Cửa hàng của tôi</p>
+                    <p>Tin nhắn</p>
+                </div>
+                <div class="user-right col-sm-9">
+                    <div class="row border padding-top">
+                        <div class="col-sm-12">
+                            <form id="form-add-document">
+                                <div style="border-bottom: 1px solid #ddd">
+                                    <div class="form-row" style="padding-top: 1rem;">
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="text" class="form-control" name="name"
+                                                    placeholder="Tên giáo trình">
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="text" class="form-control" name="university"
+                                                    placeholder="Trường">
+                                            </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-sm-6 mb-3">
+                                            <input type="number" class="form-control" name="condition"
+                                                placeholder="Tình trạng">
+                                        </div>
+                                        <div class="col-sm-6 mb-3">
+                                            <input type="number" class="form-control" name="price" placeholder="Giá">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div id="form-add-image" class="col-sm-6 mb-3">
+                                            <div class="card-add-image">
+                                                <input type="file" name="image" id="fileButton" accept="image/*" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 mb-3">
+                                            <textarea class="form-control" rows="3" name="describe"
+                                                placeholder="Mô tả"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" type="submit">Đăng</button>
+                                <button class="btn btn-danger" id="main-link">Hủy</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
